@@ -6,22 +6,34 @@ using System.Threading.Tasks;
 
 namespace HeroAndMonsters
 {
-    public class Hero : GameEntity
+    public class Hero : GameEntity, IFight
     {
-        public string Name;
-        public int Power;
-        public int Health;
-        public int Experience;
 
-        public Hero(string Name, int Power, int Health, int Experience)
-        {
-            this.Name = Name;
-            this.Power = Power;
-            this.Health = Health;
-            this.Experience = Experience;
+        public Hero(string name, int power, int health, int experience) : base(name, power, health, experience)
+       {
+           /* Name = name;
+            Power = power;
+            Health = health;
+            Experience = experience;*/
         }
 
-       
-    } 
+        public void Fight(GameEntity enemy)
+        {
+            enemy.Health -= this.Power;
+            if (enemy.Health > 0)
+            {
+                this.Health -= enemy.Power;
+            }
 
+            if (enemy.IsDefeated())
+            {
+                this.Experience += 10;
+                this.Power += 5;
+                this.Health += 10;
+            }
+
+
+        }
+
+    }
 }

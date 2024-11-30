@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HeroAndMonsters
 {
-    internal interface IFight
+    public interface IFight
     {
+        void Fight(GameEntity enemy);
     }
 }

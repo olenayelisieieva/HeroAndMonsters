@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;+-
+using System.Collections.Specialized;
+using System.Text;
 
 namespace HeroAndMonsters;
 
 class HeroAndMonsters
 {
     
-
-    static List<Monster> phoneBook = new List<Monster>();
+    
+    static List<string> name = new List<string>(){"Jackson", "Hawk", "John", "Bull", "Monster", "Crocodile", "AntyHero", "MasterValture","Black Spider", "Hill"};
+    Random random = new Random();
+    static List<Monster> monsters = new List<Monster>();
 
     static void Main(string[] args)
     {
         Console.OutputEncoding = Encoding.UTF8;
         Console.InputEncoding = Encoding.UTF8;
 
-        Hero newHero = new Hero();
-        
-        Monster monster1 = new Monster();
-        Monster monster2 = new Monster();   
+        List<string> name = new List<string>() { "Jackson", "Hawk", "John", "Bull", "Monster", "Crocodile", "AntyHero", "MasterValture", "Black Spider", "Hill" };
+        Random random = new Random();
+        List<Monster> monsters = new List<Monster>();
 
-        Monster monster3 = new Monster();
-        Monster monster4 = new Monster();
-        Monster monster5 = new Monster();
-        Monster monster6 = new Monster();
-        Monster monster7 = new Monster();
-        Monster monster8 = new Monster();
-        Monster monster9 = new Monster();
-        Monster monster10 = new Monster();
+        Hero newHero = new Hero("Hero", 100, 20, 0);
+
+        for (int i = 0; i < 10; i++)
+        {
+            monsters.Add(new Monster(
+                name[i],
+                random.Next(50, 101),  
+                random.Next(10, 21),   
+                random.Next(0, 11)     
+            ));
+        }
+
+        foreach (var monster in monsters)
+        {
+            Console.WriteLine($"Бой: {newHero.Name} against {monster.Name}");
+            newHero.Fight(monster);
+            if (newHero.IsDefeated())
+            {
+                Console.WriteLine($"{newHero.Name} was defeated.");
+                break;
+            }
+            else if (monster.IsDefeated())
+            {
+                Console.WriteLine($"{monster.Name} defeated. {newHero.Name} is winner!");
+            }
+        }
+
+
+
     }
 }

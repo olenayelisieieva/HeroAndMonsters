@@ -9,23 +9,23 @@ namespace HeroAndMonsters
     
     public class GameEntity
     {
-        public string Name;
-        public int Power;
-        public int Health;
-        public int Experience;
+        public string Name { get; set; }
+        public int Power { get; set; }
+        public int Health { get; set; }
+        public int Experience { get; set; }
 
-       public GameEntity(string Name,int Power, int Health, int Experience)
+        public GameEntity(string name,int power, int health, int experience)
         { 
-            this.Name = Name;
-            this.Power = Power; 
-            this.Health = Health;
-            this.Experience = Experience;
+            Name = name;
+            Power = power; 
+            Health = health;
+            Experience = experience;
         }
 
-        GameEntity()
-        { 
-
+        public bool IsDefeated()
+        {
+            return Health <= 0 || Power <= 0;
         }
-        
+
     }
 }
