@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace HeroAndMonsters
 {
-    internal class Monster : GameEntity
+   public class Monster : GameEntity
     {
+        public string Name;
+        public int Power;
+        public int Health;
+        public int Experience;
+
+       
     }
 }

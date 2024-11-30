@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Text;+-
 
 namespace HeroAndMonsters;
 
@@ -8,7 +8,7 @@ class HeroAndMonsters
 {
     
 
-    static List<GameEntity> phoneBook = new List<Monster>();
+    static List<Monster> phoneBook = new List<Monster>();
 
     static void Main(string[] args)
     {

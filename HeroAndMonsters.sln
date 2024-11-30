@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroAndMonsters", "HeroAndMonsters.csproj", "{89A034EB-B50B-4384-B456-90F5395B758D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeroAndMonsters", "HeroAndMonsters.csproj", "{89A034EB-B50B-4384-B456-90F5395B758D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{762F5DFD-9BA5-4388-87BE-350D7899F7DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8CE8FE14-B06B-4AE0-A0ED-F63DBD4761A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B881DE89-4EBD-4190-9F6C-87C546BF2084}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +24,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{89A034EB-B50B-4384-B456-90F5395B758D} = {8CE8FE14-B06B-4AE0-A0ED-F63DBD4761A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2194D051-919A-4CAF-8109-2DEE7D42CCE0}

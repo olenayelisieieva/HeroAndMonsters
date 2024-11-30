@@ -14,11 +14,18 @@ namespace HeroAndMonsters
         public int Health;
         public int Experience;
 
-        GameEntity(string Name,int Power, int Health)
+       public GameEntity(string Name,int Power, int Health, int Experience)
         { 
             this.Name = Name;
             this.Power = Power; 
             this.Health = Health;
+            this.Experience = Experience;
         }
+
+        GameEntity()
+        { 
+
+        }
+        
     }
 }
