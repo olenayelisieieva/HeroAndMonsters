@@ -13,21 +13,13 @@ namespace HeroAndMonsters
 
         }
 
-        public void Fight(GameEntity enemy)
+        public void Fight(GameEntity opponent)
         {
-            enemy.Health -= this.Power;
-            if (enemy.Health > 0)
+            opponent.Health -= this.Power;
+            if (opponent.Health > 0)
             {
-                this.Health -= enemy.Power;
+                this.Health -= opponent.Power;
             }
-
-            if (enemy.IsDefeated())
-            {
-                this.Experience += 10;
-                this.Power += 5;
-                this.Health += 10;
-            }
-
         }
     }
 }
