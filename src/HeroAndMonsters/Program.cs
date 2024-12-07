@@ -7,12 +7,7 @@ namespace HeroAndMonsters;
 
 class HeroAndMonsters
 {
-    
-    
-    static List<string> name = new List<string>(){"Jackson", "Hawk", "John", "Bull", "Monster", "Crocodile", "AntyHero", "MasterValture","Black Spider", "Hill"};
-    Random random = new Random();
-    static List<Monster> monsters = new List<Monster>();
-
+   
     static void Main(string[] args)
     {
         Console.OutputEncoding = Encoding.UTF8;
